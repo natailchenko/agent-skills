@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cover</title>
+<!-- Copy to brand/templates/<slug>-cover.html, replace every {{…}}, render at 1080x1350 (see references/visuals.md).
+     IMAGE: path relative to this file, e.g. ../memes/x.png or ../photos/y.jpg. Remove the .frame block for a question card. -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@500;700&display=block" rel="stylesheet">
+<style>
+  :root{
+    --base:{{BASE_DARK|#0B1F3A}}; --main:{{MAIN|#1E4FD8}}; --tint:{{TINT|#6FB6FF}};
+    --white:#fff; --accent:{{ACCENT|#FF8A3D}};
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1080px;height:1350px}
+  body{font-family:Inter,sans-serif;color:var(--white);position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 85% 8%, color-mix(in srgb, var(--main) 55%, transparent) 0, transparent 45%),
+      linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px) 0 0/54px 54px,
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px) 0 0/54px 54px,
+      var(--base)}
+  .wrap{position:absolute;inset:80px 80px 70px 80px;display:flex;flex-direction:column}
+  .tag{align-self:flex-start;font:700 24px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--tint);
+       border:2px solid color-mix(in srgb, var(--tint) 45%, transparent);border-radius:999px;padding:14px 24px}
+  h1{margin-top:34px;font:800 68px/1.08 Montserrat;letter-spacing:-.02em}
+  h1 .accent{color:var(--accent)}
+  .sub{margin-top:14px;font:700 40px/1.2 Montserrat;color:var(--tint)}
+  .frame{margin:40px auto 0;width:{{FRAME_WIDTH|600}}px;background:var(--white);border:8px solid var(--main);
+    border-radius:26px;padding:14px;transform:rotate({{TILT|-2}}deg);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+  .crop{width:100%;max-height:{{CROP_HEIGHT|760}}px;overflow:hidden;border-radius:14px}
+  .crop img{width:100%;display:block}
+  .foot{margin-top:auto;padding-top:24px;display:flex;align-items:baseline;gap:16px}
+  .name{font:700 30px/1 Inter} .dot{color:var(--tint);font:700 28px/1 Inter} .tagline{font:500 28px/1 Inter;color:var(--tint)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="tag">{{SERIES_OR_TOPIC}}</div>
+    <h1>{{HEADLINE_START}} <span class="accent">{{ACCENT_WORDS}}</span></h1>
+    <div class="sub">{{SUBLINE_OPTIONAL}}</div>
+    <div class="frame"><div class="crop"><img src="{{IMAGE}}" alt=""></div></div>
+    <div class="foot"><span class="name">{{NAME}}</span><span class="dot">·</span><span class="tagline">{{SIGNATURE}}</span></div>
+  </div>
+</body>
+</html>

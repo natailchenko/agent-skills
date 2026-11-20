@@ -1,0 +1,29 @@
+---
+name: linkedin-voice
+description: Turn the owner's raw idea (often a voice dictation, any language) into a LinkedIn post draft in their voice, then save it, fact-check it, humanize it and update the voice guide. Use whenever they share a post idea, theses or a dictation, ask to write, rewrite or shorten a post, and after they give feedback on a draft.
+---
+
+# LinkedIn voice
+
+Rules live in project files, so they stay in one place:
+- `voice/voice-guide.md` — how they write (source of truth for voice)
+- `CLAUDE.md` — confidentiality, cadence, dashboard
+- `profile/background.md` — facts (🔒 = never use)
+- linkedin-brand-studio skill `references/post-rules.md` — format, sounding human, fact check
+
+## Idea → draft
+1. Append their dictation, word for word, to `voice/samples/` under `## <topic> (<date>)`.
+2. Add the idea to `ideas/idea-bank.md` (next free number, pillar, format, status `draft`).
+3. Shape: two separate points or over 200 words → propose a split (one line per post), split only after they agree. Thin idea → propose what to add.
+4. Fact-check every claim. Fix and explain corrections in 1–3 sentences.
+5. Confidentiality check. Flag doubts as `⚠️ RISK:`.
+6. Write the draft in their voice: hook ≤12 words, their structure, their phrases, 80–200 words, a specific question at the end. Never add facts they didn't give.
+7. Humanize (humanizer skill if installed, else the checklist), then check by hand. Count words.
+8. Save to `drafts/YYYY-MM-DD-slug.md` (template in post-rules.md), add to `calendar.md` (status `draft`).
+9. Reply in their chat language: the post as a quote, what you kept from their words, corrections with reasons, split/expand proposal, what needs their decision.
+10. Sync the board.
+
+## After feedback
+- Approved → status `approved` in the draft, calendar and idea bank. Then cover image and `ready/` kit.
+- Edits → apply, humanize again if the text changed a lot, and log one line in the voice guide under "What they changed": what they changed → what it teaches. The same kind of edit twice → make it a rule.
+- Sync the board.
