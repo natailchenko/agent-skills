@@ -7,6 +7,7 @@ Skills for Claude (Claude Code, the Claude desktop app, claude.ai) and other age
 | Skill | What it does |
 |---|---|
 | [linkedin-brand-studio](skills/linkedin-brand-studio) | Turns Claude into a small content studio for your LinkedIn: strategy, your voice, post drafts, covers, publishing kits and a live content board. |
+| [prompt-upgrade](skills/prompt-upgrade) | Turns a rough idea into a clear brief and then does the work. An expert committee picked for the task sets the quality bar before anything is produced. |
 
 ## Install one skill
 
